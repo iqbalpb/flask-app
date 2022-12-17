@@ -22,7 +22,8 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /root/fla/
+          mkdir -p flask
+          cd /root/flask
           eval `ssh-agent -s`
           ssh-add /root/deploy
           git pull
